@@ -1,0 +1,7 @@
+DELIMITER //;
+CREATE PROCEDURE `searchByTitle`(IN searchParam VARCHAR(125))
+BEGIN
+    SELECT * 
+    FROM books;
+END;//
+DELIMITER ;;
