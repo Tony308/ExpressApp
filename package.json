@@ -4,8 +4,8 @@
   "description": "Full stack express app",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "npx jest"
   },
   "author": "Tony Huang",

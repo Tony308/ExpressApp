@@ -12,12 +12,11 @@ const baseURL = `http://www.omdbapi.com/?apikey=612ed499`;
 
 app.use(async (err, req, res, next) => {
     console.error(err.stack);
-    res.writeHead(500)
     res.status(500).send('Someithing Broke!')
     res.end('error')
 })
 
-app.get('/', async (req, res) => {
+app.get('/test', async (req, res) => {
     const {data} = await axios.get(baseURL + `&t=how+to+train`)
     res.end(JSON.stringify(data))
 })
@@ -28,7 +27,6 @@ app.post('/search', async (req, res) => {
     res.end(JSON.stringify(result))
 })
 
-
 app.listen(port, () => {
-    console.log(`Following tutorial, listen on port http://localhost:${port}`)
+    console.log(`Following tutorial, listen on port http://localhost:${process.env.PORT}`)
 })
